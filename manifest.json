@@ -12,9 +12,20 @@
     "48": "icons/window.png",
     "96": "icons/window@2x.png"
   },
-  "description": "A list of methods you can perform on a window.",
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+  "permissions": ["storage"],
+  "description": "Programm to support the work of: `TODO`",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/window-manipulator",
   "manifest_version": 2,
-  "name": "Window manipulator",
-  "version": "1.0"
+  "name": "Bookmark Room",
+  "version": "0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bookmark.room@project.com",
+      "strict_min_version": "42.0"
+    }
+  }
 }

@@ -15,9 +15,20 @@ document.addEventListener("click", (e) => {
     window.open(createLink(link.value));
   }
 });
-console.log('Start');
-document.getElementById('room-svg').addEventListener("load", () => {
-  console.log('loaded');
-  const e = document.getElementById('room-svg');
-  e.parentElement.replaceChild(e.contentDocument.documentElement.cloneNode(true), e);
+
+document.addEventListener("DOMContentLoaded", function(){
+  loadRoom(function(data){
+    room_svg = document.getElementById("room-svg");
+    if (!data.room) {
+      room_svg.addEventListener("load", function() {
+        room_svg.parentElement.replaceChild(room_svg.contentDocument.documentElement.cloneNode(true), room_svg);
+      });
+      return;
+    }
+    para = document.createElement("div");
+    para.id = "room_svg";
+    para.innerHTML = data.room;
+    document.getElementById("room").replaceChild(para, room_svg);
+  });
+
 });
