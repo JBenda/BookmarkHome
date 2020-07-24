@@ -7,7 +7,6 @@ function addHover(node) {
     link = node.attributes.getNamedItem('bookmark');
   }
   if(link) {
-    console.log('hit')
     span = document.createElement("span");
     span.classList.add('tooltiptext');
     text = document.createTextNode(link.value);
@@ -18,6 +17,7 @@ function addHover(node) {
     const bb = span.getClientRects()[0];
     span.style.left = (rect.x + rect.width/2 - bb.width/2)+'px';
     span.style.top = (rect.y+rect.height/2 - bb.height/2)+'px';
+    url = (' '+ link.value).slice(1); // deep copy
     node.addEventListener('mouseover', function(){
       span.timer = setTimeout(function() {
         span.style.visibility="visible";
@@ -36,7 +36,7 @@ function addHover(node) {
       }
     })
     span.addEventListener('click', function(){
-      wopen(link.value);
+      wopen(url);
     })
   }
 
