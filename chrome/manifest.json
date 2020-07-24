@@ -1,0 +1,24 @@
+{
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "BookmarkRoom",
+    "default_popup": "window.html",
+    "default_icon": {
+      "19": "icons/window19.png",
+      "38": "icons/window38.png"
+    }
+  },
+  "icons": {
+    "48": "icons/window.png",
+    "96": "icons/window@2x.png"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": ["storage"],
+  "description": "Programm to use the work of: graephin",
+  "homepage_url": "https://github.com/JBenda/BookmarkHome",
+  "manifest_version": 2,
+  "name": "Bookmark Room",
+  "version": "1.0"
+}
