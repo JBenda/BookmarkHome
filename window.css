@@ -10,3 +10,15 @@ a {
 .panel {
   margin: 5px;
 }
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: gray;
+  color: #FFF;
+  text-align:center;
+  border-radius: 6px;
+  padding: 5px 5px 5px 5px;
+
+  position: absolute;
+  z-index: 1;
+}
